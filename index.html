@@ -2,8 +2,85 @@
 <html lang="en-US">
   <head>
     <title>Search The Muse</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Testing gh-pages hosting</h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Search The Muse Demo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Job Listings</h1>
+        <p>Filter job listings below and browse the listing results.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Filters</h2>
+
+          <form id="search-form">
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" class="form-control" name="company" id="company" placeholder="Dropbox...">
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" class="form-control" name="location" id="location" placeholder="Albany, NY">
+            </div>
+            <div class="form-group">
+              <label for="category">Job Category</label>
+              <input type="text" class="form-control" name="category" id="category" placeholder="Education...">
+            </div>
+            <div class="form-group">
+              <label for="level">Experience Level</label>
+              <input type="text" class="form-control" name="level" id="level" placeholder="Internship...">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="descending"> Reverse order results
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="flexible"> Show jobs with flexible location
+              </label>
+            </div>
+            <button type="submit" href="#" class="btn btn-default">Search Jobs &raquo;</button>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <h2>Results</h2>
+          <div id="listings"></div>
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; James Koval</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- App Code -->
+    <script src="./index.js"></script>
   </body>
 </html>
