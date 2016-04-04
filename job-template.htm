@@ -1,5 +1,22 @@
 <script id="job-template" type="text/html">
 {{#results}}
-    <p>Job Name: {{name}}</p>
+  <div class="well">
+    <strong>{{name}}</strong>
+    <hr>
+    <dl class="dl-horizontal">
+      <dt>Company</dt>
+      <dd>{{company.name}}</dd>
+      <dt>Type</dt>
+        <dd>{{type}}</dd>
+      <dt>Locations</dt>
+      {{#locations}}
+        <dd>{{name}}</dd>
+      {{/locations}}
+      <dt>Levels</dt>
+      {{#levels}}
+        <dd>{{name}}</dd>
+      {{/levels}}
+    </dl>
+  </div>
 {{/results}}
 </script>
